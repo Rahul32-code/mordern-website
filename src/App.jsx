@@ -7,7 +7,7 @@ import Teams from "./pages/Teams";
 import OurWork from "./pages/OurWork";
 import ContactUs from "./pages/ContactUs";
 import { Toaster } from "react-hot-toast";
-import Footer from "./pages/footer";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
