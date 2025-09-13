@@ -1,13 +1,18 @@
 import { useState } from "react";
 import assets from "../assets/assets.js";
 import ThemeToogleBtn from "./ThemeToogleBtn.jsx";
+import { motion } from "motion/react";
 
 const Navbar = ({ theme, setTheme }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <div className="sticky top-0 flex justify-between items-center px-4 sm:px-12 lg:px-24 xl:px-24 py-4 z-20 backdrop-blur-xl font-medium bg-white/50 dark:bg-gray-900/70">
-        <img
+    <motion.div
+    initial={{opacity: 0, y: -50}}
+    animate ={{opacity: 1, y: 0}}
+    transition={{duration: 0.6, ease: 'easeOut'}} 
+    className="sticky top-0 z-20 bg-white/50 dark:bg-gray-900/70 backdrop-blur-xl py-4 px-4 sm:px-12 lg:px-24 xl:px-24 flex justify-between items-center font-medium">
+      <img
         src={theme === "dark" ? assets.logo_dark : assets.logo}
         alt="Logo"
         className="w-32 sm:w-40"
@@ -83,7 +88,7 @@ const Navbar = ({ theme, setTheme }) => {
           />
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
