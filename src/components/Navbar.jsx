@@ -13,7 +13,7 @@ const Navbar = ({ theme, setTheme }) => {
     transition={{duration: 0.6, ease: 'easeOut'}} 
     className="sticky top-0 z-20 bg-white/50 dark:bg-gray-900/70 backdrop-blur-xl py-4 px-4 sm:px-12 lg:px-24 xl:px-24 flex justify-between items-center font-medium">
       <img
-        src={theme === "dark" ? assets.logo_dark : assets.logo}
+        src={theme === "dark" ? assets.logos : assets.logos}
         alt="Logo"
         className="w-32 sm:w-40"
         loading="lazy"
